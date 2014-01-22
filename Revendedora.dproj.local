@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2013/08/21 21:23:25.000.172,=C:\Users\Francisco\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/08/21 21:23:49.000.917,C:\Users\Francisco\Documents\RAD Studio\Projects\Unit1.pas=D:\Desenvolvimento\Revendedora\uMenu.pas</Transaction>
+    <Transaction>2013/08/21 21:23:49.000.918,C:\Users\Francisco\Documents\RAD Studio\Projects\Unit1.dfm=D:\Desenvolvimento\Revendedora\uMenu.dfm</Transaction>
+    <Transaction>2013/08/21 21:23:56.000.455,C:\Users\Francisco\Documents\RAD Studio\Projects\Project1.dproj=D:\Desenvolvimento\Revendedora\Revendedora.dproj</Transaction>
+    <Transaction>2013/08/21 21:24:28.000.086,=D:\Desenvolvimento\Revendedora\Unit2.pas</Transaction>
+    <Transaction>2013/08/21 21:24:39.000.096,D:\Desenvolvimento\Revendedora\Unit2.dfm=D:\Desenvolvimento\Revendedora\uVendas.dfm</Transaction>
+    <Transaction>2013/08/21 21:24:39.000.096,D:\Desenvolvimento\Revendedora\Unit2.pas=D:\Desenvolvimento\Revendedora\uVendas.pas</Transaction>
+    <Transaction>2013/08/21 21:24:45.000.431,=D:\Desenvolvimento\Revendedora\Unit3.pas</Transaction>
+    <Transaction>2013/08/21 21:25:00.000.947,D:\Desenvolvimento\Revendedora\Unit3.dfm=D:\Desenvolvimento\Revendedora\uContasAReceber.dfm</Transaction>
+    <Transaction>2013/08/21 21:25:00.000.947,D:\Desenvolvimento\Revendedora\Unit3.pas=D:\Desenvolvimento\Revendedora\uContasAReceber.pas</Transaction>
+    <Transaction>2013/08/21 21:25:07.000.896,=D:\Desenvolvimento\Revendedora\Unit4.pas</Transaction>
+    <Transaction>2013/08/21 21:25:11.000.964,D:\Desenvolvimento\Revendedora\Unit4.dfm=D:\Desenvolvimento\Revendedora\uCaixa.dfm</Transaction>
+    <Transaction>2013/08/21 21:25:11.000.964,D:\Desenvolvimento\Revendedora\Unit4.pas=D:\Desenvolvimento\Revendedora\uCaixa.pas</Transaction>
+    <Transaction>2013/08/31 18:07:35.000.470,=D:\Desenvolvimento\Revendedora\Unit5.pas</Transaction>
+    <Transaction>2013/08/31 18:09:24.000.723,D:\Desenvolvimento\Revendedora\uLancamento.pas=D:\Desenvolvimento\Revendedora\Unit5.pas</Transaction>
+    <Transaction>2013/08/31 18:09:24.000.723,D:\Desenvolvimento\Revendedora\uLancamento.dfm=D:\Desenvolvimento\Revendedora\Unit5.dfm</Transaction>
+    <Transaction>2013/08/31 19:06:49.000.824,=D:\Desenvolvimento\Revendedora\Unit1.pas</Transaction>
+    <Transaction>2013/08/31 19:07:17.000.036,D:\Desenvolvimento\Revendedora\uDataModulo.dfm=D:\Desenvolvimento\Revendedora\Unit1.dfm</Transaction>
+    <Transaction>2013/08/31 19:07:17.000.036,D:\Desenvolvimento\Revendedora\uDataModulo.pas=D:\Desenvolvimento\Revendedora\Unit1.pas</Transaction>
+    <Transaction>2013/12/31 00:05:58.000.829,=D:\Desenvolvimento\Revendedora\Unit1.pas</Transaction>
+    <Transaction>2013/12/31 00:06:18.000.914,D:\Desenvolvimento\Revendedora\Unit1.dfm=D:\Desenvolvimento\Revendedora\uCliente.dfm</Transaction>
+    <Transaction>2013/12/31 00:06:18.000.914,D:\Desenvolvimento\Revendedora\Unit1.pas=D:\Desenvolvimento\Revendedora\uCliente.pas</Transaction>
+    <Transaction>2013/12/31 00:08:31.000.461,=D:\Desenvolvimento\Revendedora\Unit1.pas</Transaction>
+    <Transaction>2013/12/31 00:08:38.000.843,D:\Desenvolvimento\Revendedora\Unit1.pas=D:\Desenvolvimento\Revendedora\uProdutos.pas</Transaction>
+    <Transaction>2013/12/31 00:08:38.000.843,D:\Desenvolvimento\Revendedora\Unit1.dfm=D:\Desenvolvimento\Revendedora\uProdutos.dfm</Transaction>
+    <Transaction>2014/01/02 22:31:15.000.789,D:\Desenvolvimento\Revendedora\uCliente.pas=</Transaction>
+    <Transaction>2014/01/02 22:32:53.000.716,=D:\Desenvolvimento\Revendedora\uCadastroCliente.pas</Transaction>
+    <Transaction>2014/01/02 22:48:56.000.657,=D:\Desenvolvimento\Revendedora\Modelos\uClassCliente.pas</Transaction>
+    <Transaction>2014/01/02 22:59:39.000.662,=D:\Desenvolvimento\Revendedora\Controller\uControllerCliente.pas</Transaction>
+    <Transaction>2014/01/02 23:00:16.000.111,=D:\Desenvolvimento\Revendedora\Dao\uDaoCliente.pas</Transaction>
+    <Transaction>2014/01/02 23:23:55.000.956,=D:\Desenvolvimento\Agencia\uFuncoes.pas</Transaction>
+    <Transaction>2014/01/02 23:26:22.000.559,D:\Desenvolvimento\Agencia\uFuncoes.pas=</Transaction>
+    <Transaction>2014/01/02 23:28:42.000.747,=D:\Desenvolvimento\Agencia\uClassFuncoes.pas</Transaction>
+    <Transaction>2014/01/02 23:32:03.000.326,D:\Desenvolvimento\Agencia\uClassFuncoes.pas=</Transaction>
+    <Transaction>2014/01/02 23:33:32.000.126,=D:\Desenvolvimento\Revendedora\uClassFuncoes.pas</Transaction>
+    <Transaction>2014/01/02 23:34:13.000.298,=D:\Desenvolvimento\Agencia\uVariaveisGlobais.pas</Transaction>
+    <Transaction>2014/01/02 23:34:35.000.841,=D:\Desenvolvimento\Agencia\uMensagens.pas</Transaction>
+    <Transaction>2014/01/09 12:52:32.000.391,=D:\Desenvolvimento\Revendedora\Unit1.pas</Transaction>
+    <Transaction>2014/01/09 12:52:53.000.706,D:\Desenvolvimento\Revendedora\Unit1.pas=D:\Desenvolvimento\Revendedora\Controller\uControllerVendas.pas</Transaction>
+    <Transaction>2014/01/09 12:52:59.000.644,=D:\Desenvolvimento\Revendedora\Unit1.pas</Transaction>
+    <Transaction>2014/01/09 12:53:57.000.896,D:\Desenvolvimento\Revendedora\Unit1.pas=D:\Desenvolvimento\Revendedora\Dao\uDaoVendas.pas</Transaction>
+    <Transaction>2014/01/09 12:55:55.000.985,=D:\Desenvolvimento\Revendedora\Unit1.pas</Transaction>
+    <Transaction>2014/01/09 12:56:06.000.146,D:\Desenvolvimento\Revendedora\Unit1.pas=D:\Desenvolvimento\Revendedora\Modelos\uClassVenda.pas</Transaction>
+    <Transaction>2014/01/09 13:02:45.000.229,=D:\Desenvolvimento\Revendedora\Unit1.pas</Transaction>
+    <Transaction>2014/01/09 13:03:06.000.857,D:\Desenvolvimento\Revendedora\Unit1.pas=D:\Desenvolvimento\Revendedora\Modelos\uClassItemVenda.pas</Transaction>
+    <Transaction>2014/01/14 22:34:16.000.477,=D:\Desenvolvimento\Revendedora\Unit1.pas</Transaction>
+    <Transaction>2014/01/14 22:34:30.000.150,D:\Desenvolvimento\Revendedora\Unit1.pas=D:\Desenvolvimento\Revendedora\Controller\uControllerContasReceber.pas</Transaction>
+    <Transaction>2014/01/14 22:34:37.000.800,=D:\Desenvolvimento\Revendedora\Unit1.pas</Transaction>
+    <Transaction>2014/01/14 22:34:48.000.347,D:\Desenvolvimento\Revendedora\Unit1.pas=D:\Desenvolvimento\Revendedora\Dao\uDaoContasReceber.pas</Transaction>
+    <Transaction>2014/01/14 22:38:03.000.348,=D:\Desenvolvimento\Revendedora\Unit1.pas</Transaction>
+    <Transaction>2014/01/14 22:38:15.000.749,D:\Desenvolvimento\Revendedora\Unit1.pas=D:\Desenvolvimento\Revendedora\Modelos\uclassContasReceber.pas</Transaction>
+    <Transaction>2014/01/15 12:59:47.000.134,D:\Desenvolvimento\Revendedora\Dao\uDaoContasReceber.pas=</Transaction>
+    <Transaction>2014/01/15 13:01:01.000.523,=D:\Desenvolvimento\Revendedora\Dao\uDaoContasReceber.pas</Transaction>
+    <Transaction>2014/01/15 13:11:09.000.283,D:\Desenvolvimento\Revendedora\Dao\uDaoContasReceber.pas=</Transaction>
+    <Transaction>2014/01/15 13:12:33.000.098,=D:\Desenvolvimento\Revendedora\Unit1.pas</Transaction>
+    <Transaction>2014/01/15 13:13:42.000.256,D:\Desenvolvimento\Revendedora\Dao\uDaoContasReceber.pas=D:\Desenvolvimento\Revendedora\Unit1.pas</Transaction>
+    <Transaction>2014/01/17 12:58:54.000.193,=D:\Desenvolvimento\Revendedora\Unit1.pas</Transaction>
+    <Transaction>2014/01/17 12:59:18.000.396,D:\Desenvolvimento\Revendedora\Unit1.pas=D:\Desenvolvimento\Revendedora\Modelos\uClassCaixa.pas</Transaction>
+  </Transactions>
+</BorlandProject>
