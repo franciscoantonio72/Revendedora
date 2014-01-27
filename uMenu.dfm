@@ -13,32 +13,41 @@ object frmPrincipal: TfrmPrincipal
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Button1: TButton
-    Left = 88
-    Top = 40
+  object Button5: TButton
+    Left = 112
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'Clientes'
     TabOrder = 0
-    OnClick = Button1Click
+    OnClick = Button5Click
   end
-  object Button2: TButton
-    Left = 184
-    Top = 40
+  object Button6: TButton
+    Left = 208
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'Vendas'
     TabOrder = 1
-    OnClick = Button2Click
+    OnClick = Button6Click
   end
-  object Button3: TButton
-    Left = 280
-    Top = 40
+  object Button7: TButton
+    Left = 304
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'Produtos'
     TabOrder = 2
-    OnClick = Button3Click
+    OnClick = Button7Click
+  end
+  object Button8: TButton
+    Left = 400
+    Top = 112
+    Width = 75
+    Height = 25
+    Caption = 'A Receber'
+    TabOrder = 3
+    OnClick = Button8Click
   end
   object cxSmallImages: TcxImageList
     BkColor = clWhite
@@ -11931,10 +11940,10 @@ object frmPrincipal: TfrmPrincipal
       end>
   end
   object ilImage3: TImageList
-    Left = 144
-    Top = 134
+    Left = 168
+    Top = 278
     Bitmap = {
-      494C010156005700680110001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010156005700740110001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000006001000001002000000000000060
       01000000000000000000000000000000000000000000000000002D6782002D67
       82002D6782002D6782002D6782002D67820060675100D46E1E00C64A0500293F
@@ -14848,10 +14857,10 @@ object frmPrincipal: TfrmPrincipal
   object ilImagem3: TImageList
     DrawingStyle = dsFocus
     ShareImages = True
-    Left = 80
-    Top = 134
+    Left = 96
+    Top = 270
     Bitmap = {
-      494C010110001100680110001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010110001100740110001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000005000000001002000000000000050
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -15519,10 +15528,10 @@ object frmPrincipal: TfrmPrincipal
       000000000000}
   end
   object ilImagem2: TImageList
-    Left = 16
-    Top = 134
+    Left = 40
+    Top = 278
     Bitmap = {
-      494C010132003300680110001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010132003300740110001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000040000000D0000000010020000000000000D0
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000006B0000006B0000006B0000006B0000006B0000006B0000006B

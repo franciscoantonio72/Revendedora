@@ -4,7 +4,7 @@ uses
   Vcl.Forms,
   uMenu in 'uMenu.pas' {frmPrincipal},
   uVendas in 'uVendas.pas' {frmVendas},
-  uContasAReceber in 'uContasAReceber.pas' {Form3},
+  uContasAReceber in 'uContasAReceber.pas' {frmContasAReceber},
   uCaixa in 'uCaixa.pas' {Form4},
   uLancamento in 'uLancamento.pas' {frmLancamento},
   uDataModulo in 'uDataModulo.pas' {dtmPrincipal: TDataModule},

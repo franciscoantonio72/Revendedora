@@ -32,7 +32,6 @@ type
     Panel2: TPanel;
     Código: TLabel;
     Label1: TLabel;
-    bsSkinSpeedButton1: TbsSkinSpeedButton;
     cmbCodigoProduto: TDBLookupComboBox;
     cmbDescricaoProduto: TDBLookupComboBox;
     edtQuantidade: TMaskEdit;
@@ -51,19 +50,21 @@ type
     Label6: TLabel;
     cmbCodigoTipoPagto: TDBLookupComboBox;
     cmbDescricaoTipoPagto: TDBLookupComboBox;
-    btnRemover: TbsSkinSpeedButton;
     dtsTipoPagto: TDataSource;
     cdsTipoPagto: TClientDataSet;
+    edtDataVencimento: TMaskEdit;
+    Label7: TLabel;
+    Button1: TButton;
     procedure btnFecharClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure cmbCodigoProdutoClick(Sender: TObject);
     procedure cmbDescricaoProdutoClick(Sender: TObject);
-    procedure bsSkinSpeedButton1Click(Sender: TObject);
     procedure cmbCodigoClienteClick(Sender: TObject);
     procedure cmbNomeClienteClick(Sender: TObject);
     procedure btnOkClick(Sender: TObject);
     procedure cmbCodigoTipoPagtoClick(Sender: TObject);
     procedure cmbDescricaoTipoPagtoClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     procedure LimpaCampos;
     procedure AtualizarTotal;
@@ -82,19 +83,6 @@ implementation
 {$R *.dfm}
 
 uses uMenu;
-
-procedure TfrmLancamento.bsSkinSpeedButton1Click(Sender: TObject);
-begin
-   cdsItensVendas.Append;
-   cdsItensVendas.FieldByName('Codigo').AsInteger := cmbCodigoProduto.KeyValue;
-   cdsItensVendas.FieldByName('Descricao').AsString := cdsProdutos.FieldByName('Descricao').AsString;
-   cdsItensVendas.FieldByName('Quantidade').AsInteger := StrToInt( edtQuantidade.Text );
-   cdsItensVendas.FieldByName('Preco').AsFloat := StrToFloat( edtValorUnitario.Text );
-   cdsItensVendas.FieldByName('ValorTotal').AsFloat := StrToInt( edtQuantidade.Text ) * StrToFloat( edtValorUnitario.Text );
-   cdsItensVendas.Post;
-
-   AtualizarTotal;
-end;
 
 procedure TfrmLancamento.AtualizarTotal;
 begin
@@ -130,6 +118,19 @@ begin
       FreeAndNil( loControllerContasReceber );
       FreeAndNil( loListaContasReceber );
    end;
+end;
+
+procedure TfrmLancamento.Button1Click(Sender: TObject);
+begin
+   cdsItensVendas.Append;
+   cdsItensVendas.FieldByName('Codigo').AsInteger := cmbCodigoProduto.KeyValue;
+   cdsItensVendas.FieldByName('Descricao').AsString := cdsProdutos.FieldByName('Descricao').AsString;
+   cdsItensVendas.FieldByName('Quantidade').AsInteger := StrToInt( edtQuantidade.Text );
+   cdsItensVendas.FieldByName('Preco').AsFloat := StrToFloat( edtValorUnitario.Text );
+   cdsItensVendas.FieldByName('ValorTotal').AsFloat := StrToInt( edtQuantidade.Text ) * StrToFloat( edtValorUnitario.Text );
+   cdsItensVendas.Post;
+
+   AtualizarTotal;
 end;
 
 procedure TfrmLancamento.cmbCodigoClienteClick(Sender: TObject);
@@ -210,7 +211,7 @@ var loVenda : TVenda;
     loItemVenda : TItemVenda;
 begin
    loVenda := TVenda.Create;
-   loVenda.DATACADASTRO := Now;
+   loVenda.DATACADASTRO := StrToDate( edtDataVencimento.Text );
    loVenda.CODIGOVENDEDOR := 0;
    loVenda.CODIGOCLIENTE := cmbCodigoCliente.KeyValue;
    loVenda.NOMECLIENTE := cmbNomeCliente.Text;

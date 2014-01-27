@@ -14,40 +14,6 @@
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
-  object btnRemover: TbsSkinSpeedButton
-    Left = 358
-    Top = 185
-    Width = 97
-    Height = 25
-    HintImageIndex = 0
-    SkinDataName = 'toolbutton'
-    DefaultFont.Charset = DEFAULT_CHARSET
-    DefaultFont.Color = clWindowText
-    DefaultFont.Height = 13
-    DefaultFont.Name = 'Tahoma'
-    DefaultFont.Style = []
-    DefaultWidth = 0
-    DefaultHeight = 0
-    UseSkinFont = True
-    CheckedMode = False
-    UseSkinSize = True
-    UseSkinFontColor = True
-    WidthWithCaption = 0
-    WidthWithoutCaption = 0
-    ImageIndex = 0
-    RepeatMode = False
-    RepeatInterval = 100
-    Transparent = False
-    Flat = False
-    AllowAllUp = False
-    Down = False
-    GroupIndex = 0
-    Caption = 'Remover'
-    ShowCaption = True
-    NumGlyphs = 1
-    Spacing = 1
-    OnClick = bsSkinSpeedButton1Click
-  end
   object bsSkinCoolBar1: TbsSkinCoolBar
     Left = 0
     Top = 0
@@ -194,6 +160,7 @@
         Align = alLeft
         SkinDataName = 'bevel'
         DividerMode = True
+        ExplicitTop = 2
       end
     end
   end
@@ -308,40 +275,6 @@
         Alignment = taRightJustify
         Caption = 'Quantidade'
       end
-      object bsSkinSpeedButton1: TbsSkinSpeedButton
-        Left = 240
-        Top = 125
-        Width = 97
-        Height = 25
-        HintImageIndex = 0
-        SkinDataName = 'toolbutton'
-        DefaultFont.Charset = DEFAULT_CHARSET
-        DefaultFont.Color = clWindowText
-        DefaultFont.Height = 13
-        DefaultFont.Name = 'Tahoma'
-        DefaultFont.Style = []
-        DefaultWidth = 0
-        DefaultHeight = 0
-        UseSkinFont = True
-        CheckedMode = False
-        UseSkinSize = True
-        UseSkinFontColor = True
-        WidthWithCaption = 0
-        WidthWithoutCaption = 0
-        ImageIndex = 0
-        RepeatMode = False
-        RepeatInterval = 100
-        Transparent = False
-        Flat = False
-        AllowAllUp = False
-        Down = False
-        GroupIndex = 0
-        Caption = 'Adicionar'
-        ShowCaption = True
-        NumGlyphs = 1
-        Spacing = 1
-        OnClick = bsSkinSpeedButton1Click
-      end
       object Label5: TLabel
         Left = 57
         Top = 25
@@ -364,6 +297,13 @@
         Height = 13
         Alignment = taRightJustify
         Caption = 'Tipo Pagamento'
+      end
+      object Label7: TLabel
+        Left = 208
+        Top = 105
+        Width = 55
+        Height = 13
+        Caption = 'Vencimento'
       end
       object cmbCodigoProduto: TDBLookupComboBox
         Left = 96
@@ -448,6 +388,25 @@
         ListSource = dtsTipoPagto
         TabOrder = 7
         OnClick = cmbDescricaoTipoPagtoClick
+      end
+      object edtDataVencimento: TMaskEdit
+        Left = 269
+        Top = 102
+        Width = 71
+        Height = 21
+        EditMask = '!99/99/0000;1;_'
+        MaxLength = 10
+        TabOrder = 8
+        Text = '  /  /    '
+      end
+      object Button1: TButton
+        Left = 223
+        Top = 129
+        Width = 75
+        Height = 25
+        Caption = 'Adicionar'
+        TabOrder = 9
+        OnClick = Button1Click
       end
     end
   end
