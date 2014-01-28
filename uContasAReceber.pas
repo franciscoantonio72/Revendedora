@@ -48,6 +48,9 @@ type
     procedure cmbCodigoClienteClick(Sender: TObject);
     procedure cmbNomeClienteClick(Sender: TObject);
     procedure btnSelecionarClick(Sender: TObject);
+    procedure cdsContasAReceberAfterOpen(DataSet: TDataSet);
+    procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
+      DataCol: Integer; Column: TColumn; State: TGridDrawState);
   private
     { Private declarations }
   public
@@ -72,12 +75,32 @@ begin
    qryVariavel.SQLConnection := dtmPrincipal.dbxPrincipal;
    qryVariavel.SQL.Text := 'SELECT * FROM ContasReceber '+
                            'WHERE DataVencimento>=:parDataInicial AND DataVencimento<=:parDataFinal';
+   if cmbCodigoCliente.KeyValue <> null then
+   begin
+      qryVariavel.SQL.Text := qryVariavel.SQL.Text + ' AND CodigoCliente=:parCodigoCliente';
+      qryVariavel.ParamByName('parCodigoCliente').AsString := cmbCodigoCliente.KeyValue;
+   end;
+
    qryVariavel.ParamByName('parDataInicial').AsDate := StrToDate( edtDataInicial.Text );
    qryVariavel.ParamByName('parDataFinal').AsDate := StrToDate( edtDataFinal.Text );
 
+
    cdsContasAReceber.Close;
-   cdsContasAReceber.ProviderName := dtsContasAReceber.Name;
+   cdsContasAReceber.ProviderName := dtpVariavel.Name;
    cdsContasAReceber.Open;
+end;
+
+procedure TfrmContasAReceber.cdsContasAReceberAfterOpen(DataSet: TDataSet);
+Var liCont : Integer;
+begin
+   For liCont := 1 To DataSet.FieldCount Do
+   Begin
+      If ( DataSet.Fields[ liCont - 1 ].DataType = ftFloat ) Or
+         ( DataSet.Fields[ liCont - 1 ].DataType = ftFMTBcd ) Then
+      Begin
+         TFloatField( DataSet.Fields[ liCont - 1 ] ).DisplayFormat := '0.00';
+      End;
+   End;
 end;
 
 procedure TfrmContasAReceber.cmbCodigoClienteClick(Sender: TObject);
@@ -93,6 +116,31 @@ end;
 procedure TfrmContasAReceber.cmbPeriodoClick(Sender: TObject);
 begin
    ListaPeriodo( TEdit( edtDataInicial ), TEdit( edtDataFinal ), cmbPeriodo.ItemIndex, SoData( Now ) );
+end;
+
+procedure TfrmContasAReceber.DBGrid1DrawColumnCell(Sender: TObject;
+  const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
+begin
+  With TDBGrid( Sender ) Do
+  Begin
+     If gdSelected In State Then
+        Exit;
+
+     If SoData( Column.Grid.DataSource.DataSet.FieldByName( 'DataVencimento' ).AsDateTime ) < ( Now ) Then
+     Begin
+        Canvas.Font.Color  := clRed;
+     End
+     Else If SoData( Column.Grid.DataSource.DataSet.FieldByName( 'DataVencimento' ).AsDateTime ) = ( Now ) Then
+     Begin
+        Canvas.Font.Color  := clBlue;
+     End
+     Else If SoData( Column.Grid.DataSource.DataSet.FieldByName( 'DataVencimento' ).AsDateTime ) > ( Now ) Then
+     Begin
+        Canvas.Font.Color  := clGreen;
+     End;
+
+     DefaultDrawColumnCell( Rect, DataCol, Column, State );
+  End;
 end;
 
 procedure TfrmContasAReceber.FormShow(Sender: TObject);

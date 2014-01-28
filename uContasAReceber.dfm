@@ -31,8 +31,6 @@ object frmContasAReceber: TfrmContasAReceber
     SkinDataName = 'controlbar'
     SkinBevel = True
     TabOrder = 0
-    ExplicitLeft = -172
-    ExplicitWidth = 619
     object bsSkinToolBar1: TbsSkinToolBar
       Left = 11
       Top = 0
@@ -161,6 +159,7 @@ object frmContasAReceber: TfrmContasAReceber
         Align = alLeft
         SkinDataName = 'bevel'
         DividerMode = True
+        ExplicitTop = 2
       end
     end
   end
@@ -316,7 +315,6 @@ object frmContasAReceber: TfrmContasAReceber
     Height = 231
     Align = alClient
     TabOrder = 2
-    ExplicitTop = 140
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1
@@ -331,6 +329,7 @@ object frmContasAReceber: TfrmContasAReceber
       TitleFont.Height = -11
       TitleFont.Name = 'Tahoma'
       TitleFont.Style = []
+      OnDrawColumnCell = DBGrid1DrawColumnCell
     end
   end
   object Panel3: TPanel
@@ -347,7 +346,6 @@ object frmContasAReceber: TfrmContasAReceber
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 3
-    ExplicitTop = 328
     object Label29: TLabel
       Left = 27
       Top = 9
@@ -408,12 +406,13 @@ object frmContasAReceber: TfrmContasAReceber
   object dtsContasAReceber: TDataSource
     DataSet = cdsContasAReceber
     Left = 440
-    Top = 216
+    Top = 312
   end
   object cdsContasAReceber: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dtpVariavel'
+    AfterOpen = cdsContasAReceberAfterOpen
     Left = 440
     Top = 264
   end
