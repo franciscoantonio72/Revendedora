@@ -77,7 +77,7 @@ object frmContasAReceber: TfrmContasAReceber
       Flat = True
       Images = frmPrincipal.Imagebutoes
       object btnFechar: TbsSkinSpeedButton
-        Left = 499
+        Left = 497
         Top = 0
         Width = 56
         Height = 55
@@ -111,11 +111,11 @@ object frmContasAReceber: TfrmContasAReceber
         Spacing = 1
         Layout = blGlyphTop
         OnClick = btnFecharClick
-        ExplicitLeft = 649
+        ExplicitLeft = 508
         ExplicitTop = 15
       end
       object btnOk: TbsSkinSpeedButton
-        Left = 443
+        Left = 441
         Top = 0
         Width = 56
         Height = 55
@@ -154,12 +154,115 @@ object frmContasAReceber: TfrmContasAReceber
       object bsSkinBevel1: TbsSkinBevel
         Left = 0
         Top = 0
-        Width = 443
+        Width = 185
         Height = 55
         Align = alLeft
         SkinDataName = 'bevel'
         DividerMode = True
         ExplicitTop = 2
+      end
+      object bsSkinBevel2: TbsSkinBevel
+        Left = 360
+        Top = 0
+        Width = 81
+        Height = 55
+        Align = alLeft
+        SkinDataName = 'bevel'
+        DividerMode = True
+        ExplicitLeft = 361
+        ExplicitTop = 2
+      end
+      object bsSkinMenuSpeedButton1: TbsSkinMenuSpeedButton
+        Left = 296
+        Top = 0
+        Width = 64
+        Height = 55
+        HintImageIndex = 0
+        SkinDataName = 'bigtoolmenubutton'
+        DefaultFont.Charset = DEFAULT_CHARSET
+        DefaultFont.Color = clWindowText
+        DefaultFont.Height = 13
+        DefaultFont.Name = 'Tahoma'
+        DefaultFont.Style = []
+        DefaultWidth = 0
+        DefaultHeight = 0
+        UseSkinFont = True
+        CheckedMode = False
+        UseSkinSize = True
+        UseSkinFontColor = True
+        WidthWithCaption = 0
+        WidthWithoutCaption = 0
+        ImageIndex = 6
+        RepeatMode = False
+        RepeatInterval = 100
+        Transparent = True
+        Flat = True
+        AllowAllUp = False
+        Down = False
+        GroupIndex = 0
+        Caption = 'Imprimir'
+        ShowCaption = True
+        NumGlyphs = 1
+        Align = alLeft
+        Spacing = 1
+        Layout = blGlyphTop
+        NewStyle = False
+        TrackPosition = bstpRight
+        UseImagesMenuImage = False
+        UseImagesMenuCaption = False
+        SkinPopupMenu = bsSkinPopupMenu1
+        TrackButtonMode = False
+        ExplicitLeft = 299
+        ExplicitTop = 15
+      end
+      object bsSkinBevel3: TbsSkinBevel
+        Left = 238
+        Top = 0
+        Width = 58
+        Height = 55
+        Align = alLeft
+        SkinDataName = 'bevel'
+        DividerMode = True
+        ExplicitLeft = 247
+        ExplicitTop = 2
+      end
+      object bsSkinSpeedButton1: TbsSkinSpeedButton
+        Left = 185
+        Top = 0
+        Width = 53
+        Height = 55
+        HintImageIndex = 0
+        SkinDataName = 'bigtoolbutton'
+        DefaultFont.Charset = DEFAULT_CHARSET
+        DefaultFont.Color = clWindowText
+        DefaultFont.Height = 13
+        DefaultFont.Name = 'Tahoma'
+        DefaultFont.Style = []
+        DefaultWidth = 0
+        DefaultHeight = 0
+        UseSkinFont = True
+        CheckedMode = False
+        UseSkinSize = True
+        UseSkinFontColor = True
+        WidthWithCaption = 0
+        WidthWithoutCaption = 0
+        ImageIndex = 13
+        RepeatMode = False
+        RepeatInterval = 100
+        Transparent = True
+        Flat = True
+        AllowAllUp = False
+        Down = False
+        GroupIndex = 0
+        Caption = 'Baixa'
+        ShowCaption = True
+        NumGlyphs = 1
+        Align = alLeft
+        Spacing = 1
+        Layout = blGlyphTop
+        OnClick = bsSkinSpeedButton1Click
+        ExplicitLeft = 191
+        ExplicitTop = 15
       end
     end
   end
@@ -182,7 +285,7 @@ object frmContasAReceber: TfrmContasAReceber
     end
     object btnSelecionar: TSpeedButton
       Left = 415
-      Top = 35
+      Top = 40
       Width = 113
       Height = 26
       Anchors = [akTop, akRight]
@@ -436,5 +539,12 @@ object frmContasAReceber: TfrmContasAReceber
     DataSet = cdsClientes
     Left = 360
     Top = 120
+  end
+  object bsSkinPopupMenu1: TbsSkinPopupMenu
+    Left = 328
+    Top = 56
+    object ContasaReceber1: TMenuItem
+      Caption = 'Contas a Receber'
+    end
   end
 end

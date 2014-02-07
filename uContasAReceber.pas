@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls,
   bsSkinCtrls, Vcl.ToolWin, Vcl.ComCtrls, Vcl.DBCtrls, Vcl.Buttons, Data.DB,
   Datasnap.DBClient, Vcl.Grids, Vcl.DBGrids, Data.FMTBcd, Datasnap.Provider,
-  Data.SqlExpr, uClassFuncoes, uDataModulo;
+  Data.SqlExpr, uClassFuncoes, uDataModulo, Vcl.Menus, bsSkinMenus, uBaixas;
 
 type
   TfrmContasAReceber = class(TForm)
@@ -42,6 +42,12 @@ type
     dtpVariavel: TDataSetProvider;
     cdsClientes: TClientDataSet;
     dtsClientes: TDataSource;
+    bsSkinBevel2: TbsSkinBevel;
+    bsSkinMenuSpeedButton1: TbsSkinMenuSpeedButton;
+    bsSkinBevel3: TbsSkinBevel;
+    bsSkinPopupMenu1: TbsSkinPopupMenu;
+    ContasaReceber1: TMenuItem;
+    bsSkinSpeedButton1: TbsSkinSpeedButton;
     procedure FormShow(Sender: TObject);
     procedure cmbPeriodoClick(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);
@@ -51,6 +57,7 @@ type
     procedure cdsContasAReceberAfterOpen(DataSet: TDataSet);
     procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
+    procedure bsSkinSpeedButton1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -63,6 +70,16 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmContasAReceber.bsSkinSpeedButton1Click(Sender: TObject);
+begin
+   frmBaixas := TfrmBaixas.Create( Application );
+   try
+      frmBaixas.ShowModal;
+   finally
+      FreeAndNil( frmBaixas );
+   end;
+end;
 
 procedure TfrmContasAReceber.btnFecharClick(Sender: TObject);
 begin

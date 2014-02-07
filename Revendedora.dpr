@@ -23,7 +23,9 @@ uses
   uControllerContasReceber in 'Controller\uControllerContasReceber.pas',
   uclassContasReceber in 'Modelos\uclassContasReceber.pas',
   uDaoContasReceber in 'Dao\uDaoContasReceber.pas',
-  uClassCaixa in 'Modelos\uClassCaixa.pas';
+  uClassCaixa in 'Modelos\uClassCaixa.pas',
+  uBaixas in 'uBaixas.pas' {frmBaixas},
+  uQtdeCR in 'uQtdeCR.pas' {frmQtdeCR};
 
 {$R *.res}
 
@@ -36,5 +38,7 @@ begin
   Application.CreateForm(TfrmCadastroProdutos, frmCadastroProdutos);
   Application.CreateForm(TfrmCadastroCliente, frmCadastroCliente);
   Application.CreateForm(TFrmMensagens, FrmMensagens);
+  Application.CreateForm(TfrmBaixas, frmBaixas);
+  Application.CreateForm(TfrmQtdeCR, frmQtdeCR);
   Application.Run;
 end.
